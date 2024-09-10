@@ -1,12 +1,3 @@
-"""
-mavsim_python
-    - Chapter 10 assignment for Beard & McLain, PUP, 2012
-    - Last Update:
-        3/11/2019 - RWB
-        2/27/2020 - RWB
-        1/5/2023 - David L. Christiansen
-        7/13/2023 - RWB
-"""
 import os, sys
 # insert parent directory at beginning of python search path
 from pathlib import Path
@@ -59,7 +50,7 @@ cur_goal = np.array([[-100. + np.random.uniform(0, 200),
 while sim_time < end_time:
     # current goal
     if np.linalg.norm(mav._state[0:3] - cur_goal) < 50:
-        # 在200*200内随机生成一个目标点
+        # random genetrated
         cur_goal = np.array([[-100. + np.random.uniform(0, 200), 
                             -100. + np.random.uniform(0, 200), 
                             -100. + np.random.uniform(0, 50)]]).T
